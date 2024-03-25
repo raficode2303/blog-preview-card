@@ -64,7 +64,8 @@ h3 {
   box-shadow: 10px 10px var(--black-color);
   transition: box-shadow 300ms;
 }
-.main-app:hover {
+.main-app:hover,
+.main-app:focus {
   box-shadow: 20px 20px var(--black-color);
 }
 .main-app .article-img {
@@ -77,7 +78,8 @@ h3 {
 .main-app h1 a {
   color: inherit;
 }
-.main-app:hover h1 {
+.main-app:hover h1,
+.main-app:focus h1 {
   color: var(--yellow-color);
 }
 .main-app .learning-tag {
