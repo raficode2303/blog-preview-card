@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url(./assets/fonts/static/Figtree-ExtraBold.ttf);
+  font-weight: 800;
+}
+/* === reset ==== */
+:root {
+  --yellow-color: hsl(47, 88%, 63%);
+  --primary-color: var(--yellow-color);
+  --white-color: hsl(0, 0%, 100%);
+  --grey-color: hsl(0, 0%, 50%);
+  --black-color: hsl(0, 0%, 7%);
+  --max-width: 400px;
+  --gap-1rem: 1rem;
+  --border-radius: var(--gap-1rem);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* how to import a local font type -DONE! */
+  font-family: 'Figtree', sans-serif;
+  line-height: 1.5;
+  font-size: clamp(14px, 4vw, 1rem);
+  background-color: var(--primary-color);
+  color: var(--black-color);
+}
+
+/* === tags === */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-weight: 700;
+}
+h3 {
+  font-weight: 400;
+}
+/* === classes === */
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.main-app {
+  max-width: var(--max-width);
+  display: grid;
+  gap: var(--gap-1rem);
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--white-color);
+  border: solid 1px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: 10px 10px var(--black-color);
+  transition: box-shadow 300ms;
+}
+.main-app:hover {
+  box-shadow: 20px 20px var(--black-color);
+}
+.main-app .article-img {
+  border-radius: var(--border-radius);
+  place-self: center;
+}
+.main-app h1 {
+  font-size: 1.47rem;
+}
+.main-app h1 a {
+  color: inherit;
+}
+.main-app:hover h1 {
+  color: var(--yellow-color);
+}
+.main-app .learning-tag {
+  max-width: fit-content;
+  font-weight: 700;
+  background-color: var(--yellow-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.main-app article {
+  font-size: 1rem;
+  color: var(--grey-color);
+  max-width: 40ch;
+}
+.main-app .article::before {
+  content: '\2E42';
+  font-size: 100px;
+  color: #009578;
+  display: block;
+  margin-block: -100px -20px;
+  margin-inline-start: -10px;
+}
+.author-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--border-radius);
+}
